@@ -27,18 +27,12 @@ Route::get('/', function () {
 
 Route::resource('pelanggan',PelangganController::class)
 ->except('destory')->middleware('auth');
-
 Route::resource('kudapan',KudapanController::class)->middleware('auth');
-
 Route::resource('user',UserController::class)
 ->except('destroy','create','show','update','edit')->middleware('auth');
-
 Route::get('login',[LoginController::class,'loginView'])->name('login');
-
 Route::post('login',[LoginController::class,'authenticate']);
-
 Route::post('/logout', [LoginController::class, 'logout'])->name('auth.logout');
-
 Route::get('penjualan',function(){return View('penjualan.index',[
     "title"=>"Penjualan"
 ]);
