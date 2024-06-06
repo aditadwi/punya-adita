@@ -32,10 +32,4 @@ class UserController extends Controller
         return redirect()->route('user.index')->with('success','Data User Beerhasil Ditambahkan');
     }
 }
-public function store(Request $request):RedirectResponse
-    {
-        $request->validate([
-            "name"=>"required",
-            "email"=>"required",
-            "password"=>"required"
-        ]);
+
