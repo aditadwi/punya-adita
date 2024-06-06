@@ -46,3 +46,15 @@ class WelcomeController extends Controller
 
     
 }
+public function welcome()
+{
+    $kudapan = Kudapan::count();
+    $pelanggan = Pelanggan::count();
+    $user = User::count();
+    $detiltransaksi = Transaksi::count();
+
+    $tanggal_awal = date('Y-m-01');
+    $tanggal_akhir = date('Y-m-d');
+
+    $data_tanggal = array();
+    $data_pendapatan = array();
