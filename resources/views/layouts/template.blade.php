@@ -230,11 +230,3 @@
 </body>
 
 </html>
-<li class="nav-item">
-                            <a href="{{ route('user.index')}}" class="nav-link {{ ($title==='Users')?'active':''}}">
-                                <i class="nav-icon fas fa-users"></i>
-                                <p>
-                                    Users
-                                </p>
-                            </a>
-                        </li>
